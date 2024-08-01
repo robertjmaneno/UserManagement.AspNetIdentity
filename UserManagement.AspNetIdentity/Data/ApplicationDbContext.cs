@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using UserManagement.AspNetIdentity.Models.Domain;
 
 namespace UserManagement.AspNetIdentity.Data
 {
@@ -10,6 +11,8 @@ namespace UserManagement.AspNetIdentity.Data
             : base(options)
         {
         }
+
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
