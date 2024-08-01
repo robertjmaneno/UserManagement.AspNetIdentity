@@ -13,7 +13,6 @@ namespace UserManagement.AspNetIdentity.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -34,9 +33,13 @@ namespace UserManagement.AspNetIdentity.Data
                 entity.ToTable("UserClaims");
             });
 
+
+
+
             builder.Entity<IdentityUserLogin<string>>(entity => {
                 entity.ToTable("UserLogins");
             });
+
 
             builder.Entity<IdentityRoleClaim<string>>(entity => {
                 entity.ToTable("RoleClaims");
