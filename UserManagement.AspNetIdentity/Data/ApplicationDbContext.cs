@@ -11,7 +11,6 @@ namespace UserManagement.AspNetIdentity.Data
             : base(options)
         {
         }
-
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
